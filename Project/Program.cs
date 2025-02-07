@@ -10,7 +10,10 @@ public class StringCalculator {
 		if (numbers == "")
 			return 0;
 
-		string[] separatedNumbers = numbers.Split(",");
+		string[] separatedNumbers = numbers.Split(
+			new string[]{",","\n"}, 
+			StringSplitOptions.RemoveEmptyEntries
+			);
 		int sum = 0;
 		
 		

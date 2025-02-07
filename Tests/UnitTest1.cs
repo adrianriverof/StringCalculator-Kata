@@ -67,10 +67,27 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("1,1,1,1,1,2,2,1,1,1"), Is.EqualTo(12));
 	}
+	[Test]
+	public void use_newline_separator()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1\n1"), Is.EqualTo(2));
+	}
+	[Test]
+	public void combine_newline_comma()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1\n1,3"), Is.EqualTo(5));
+	}
 
 
 
-	
-	
-	
+
+
+
+	[Test]
+	public void a()
+	{
+		
+	}
 }
