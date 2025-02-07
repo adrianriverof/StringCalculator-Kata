@@ -79,15 +79,5 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("1\n1,3"), Is.EqualTo(5));
 	}
-
-
-
-
-
-
-	[Test]
-	public void a()
-	{
-		
-	}
+	
 }
