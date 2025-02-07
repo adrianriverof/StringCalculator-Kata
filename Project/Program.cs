@@ -11,15 +11,15 @@ public class StringCalculator {
 			return 0;
 
 		string[] separatedNumbers = numbers.Split(",");
-		int valueToReturn = 0;
+		int sum = 0;
 		
 		
 		foreach (var number in separatedNumbers)
 		{
-			valueToReturn += int.Parse(number);
+			sum += int.Parse(number);
 		}
 
-		return valueToReturn;
+		return sum;
 	}
 }
 
