@@ -37,6 +37,14 @@ public class Tests {
 		
 	}
 
+	[Test]
+	public void add_two_numbers_1_plus_1_is_2()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1,1"), Is.EqualTo(2));
+	}
+	
+	
 	
 	
 	
