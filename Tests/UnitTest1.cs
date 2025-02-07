@@ -49,6 +49,20 @@ public class Tests {
 		Assert.That(sut.Add("3,65"), Is.EqualTo(68));
 	}
 
+	[Test]
+	public void add_multiple_numbers_1_3_times()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1,1,1"), Is.EqualTo(3));
+	}
+	[Test]
+	public void add_multiple_numbers_1_10_times()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1,1,1,1,1,1,1,1,1,1"), Is.EqualTo(10));
+	}
+
+
 
 
 	
