@@ -1,3 +1,4 @@
+using Project;
 namespace Tests;
 
 public class Tests {
@@ -8,6 +9,15 @@ public class Tests {
 	public void Test1() {
 		Assert.Pass();
 	}
-	
+
+	[Test]
+
+	public void add_returns_0_when_nothing_passed()
+	{
+		StringCalculator sut = new StringCalculator();
+		
+		Assert.That(sut.Add(""), Is.EqualTo(0));
+		
+	}
 	
 }

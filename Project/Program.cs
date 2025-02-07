@@ -1,11 +1,11 @@
 ﻿namespace Project;
 
-class StringCalculator {
+public class StringCalculator {
 	static void Main(string[] args) {
 		Console.WriteLine("Hello, World!");
 	}
 
-	int Add(string numbers)
+	public int Add(string numbers)
 	{
 		return 0;
 	}
