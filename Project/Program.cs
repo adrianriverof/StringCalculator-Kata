@@ -10,14 +10,16 @@ public class StringCalculator {
 		if (numbers == "")
 			return 0;
 
-		string[] separated_numbers = numbers.Split(",");
-		int value_to_return = 0;
-		foreach (var number in separated_numbers)
+		string[] separatedNumbers = numbers.Split(",");
+		int valueToReturn = 0;
+		
+		
+		foreach (var number in separatedNumbers)
 		{
-			value_to_return += int.Parse(number);
+			valueToReturn += int.Parse(number);
 		}
 
-		return value_to_return;
+		return valueToReturn;
 	}
 }
 
