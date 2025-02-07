@@ -28,7 +28,15 @@ public class Tests {
 		Assert.That(sut.Add("4"), Is.EqualTo(4));
 		
 	}
-	
+	[Test]
+	public void otherexample_returns_number_if_only_one()
+	{
+		StringCalculator sut = new StringCalculator();
+		
+		Assert.That(sut.Add("46456"), Is.EqualTo(46456));
+		
+	}
+
 	
 	
 	
