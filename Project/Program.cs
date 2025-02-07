@@ -18,7 +18,6 @@ public class StringCalculator {
 		}
 
 		return value_to_return;
-		return int.Parse(numbers);
 	}
 }
 
