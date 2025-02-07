@@ -36,16 +36,21 @@ public class Tests {
 		Assert.That(sut.Add("46456"), Is.EqualTo(46456));
 		
 	}
-
 	[Test]
 	public void add_two_numbers_1_plus_1_is_2()
 	{
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("1,1"), Is.EqualTo(2));
 	}
-	
-	
-	
+	[Test]
+	public void add_3_plus_65_equals_68()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("3,65"), Is.EqualTo(68));
+	}
+
+
+
 	
 	
 	
