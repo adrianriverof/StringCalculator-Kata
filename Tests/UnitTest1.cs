@@ -61,7 +61,12 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("1,1,1,1,1,1,1,1,1,1"), Is.EqualTo(10));
 	}
-
+	[Test]
+	public void add_multiple_numbers_not_just_ones()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1,1,1,1,1,2,2,1,1,1"), Is.EqualTo(12));
+	}
 
 
 
