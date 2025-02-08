@@ -15,8 +15,9 @@ public class StringCalculator {
 		
 		if (numbers.StartsWith("//"))
 		{
+			string separator = numbers[2].ToString();
 			separatedNumbers = numbers.Substring(4).Split(
-				new string[]{";"}, 
+				new string[]{separator}, 
 				StringSplitOptions.RemoveEmptyEntries
 			);
 		}
