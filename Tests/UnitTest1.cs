@@ -104,6 +104,13 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(() => sut.Add("-1,-3,-3"), Throws.Exception.With.Message.EqualTo("error: negatives not allowed: -1 -3 -3"));
 	}
+
+	[Test]
+	public void ignore_numbers_bigger_than_1000()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("1003,2"), Is.EqualTo(2));
+	}
 	
 	
 }
