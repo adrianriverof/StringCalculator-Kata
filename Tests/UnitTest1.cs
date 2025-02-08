@@ -99,10 +99,10 @@ public class Tests {
 		Assert.That(sut.Add("//%\n1%2%4"), Is.EqualTo(1+2+4));
 	}
 	[Test]
-	public void negatives_not_allowed()
+	public void negatives_not_allowed_using_same_number()
 	{
 		StringCalculator sut = new StringCalculator();
-		Assert.That(() => sut.Add("-1,2,-3"), Throws.Exception.With.Message.EqualTo("error: negatives not allowed: -1 -3"));
+		Assert.That(() => sut.Add("-1,-3,-3"), Throws.Exception.With.Message.EqualTo("error: negatives not allowed: -1 -3 -3"));
 	}
 	
 	
