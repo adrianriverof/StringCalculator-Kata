@@ -92,4 +92,11 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("//a\n1a2a4"), Is.EqualTo(1+2+4));
 	}
+	[Test]
+	public void custom_separator_can_be_percent()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("//%\n1%2%4"), Is.EqualTo(1+2+4));
+	}
+	
 }
