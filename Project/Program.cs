@@ -34,7 +34,12 @@ public class StringCalculator {
 		
 		foreach (var number in separatedNumbers)
 		{
-			sum += int.Parse(number);
+			int numberInt = int.Parse(number);
+			if (numberInt < 0)
+			{
+				throw new Exception("error: negatives not allowed");
+			}
+			sum += numberInt;
 		}
 
 		return sum;
