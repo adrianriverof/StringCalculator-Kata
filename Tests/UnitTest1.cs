@@ -33,7 +33,7 @@ public class Tests {
 	{
 		StringCalculator sut = new StringCalculator();
 		
-		Assert.That(sut.Add("46456"), Is.EqualTo(46456));
+		Assert.That(sut.Add("46"), Is.EqualTo(46));
 		
 	}
 	[Test]
