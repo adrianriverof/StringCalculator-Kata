@@ -50,6 +50,13 @@ public class StringCalculator {
 			sum += numberInt;
 		}
 
+		ThrowErrorIfThereAreNegatives(negatives);
+		
+		return sum;
+	}
+
+	private static void ThrowErrorIfThereAreNegatives(List<int> negatives)
+	{
 		if (negatives.Count != 0)
 		{
 			string errorMessage = "error: negatives not allowed:";
@@ -60,8 +67,6 @@ public class StringCalculator {
 
 			throw new Exception(errorMessage);
 		}
-		
-		return sum;
 	}
 }
 
