@@ -10,16 +10,24 @@ public class StringCalculator {
 		if (numbers == "")
 			return 0;
 
+
+		string[] separatedNumbers;
 		
-		if (numbers.Contains("//"))
+		if (numbers.StartsWith("//"))
 		{
-			return 3;
+			separatedNumbers = numbers.Substring(4).Split(
+				new string[]{";"}, 
+				StringSplitOptions.RemoveEmptyEntries
+			);
+		}
+		else
+		{
+			separatedNumbers = numbers.Split(
+				new string[]{",","\n"}, 
+				StringSplitOptions.RemoveEmptyEntries
+			);
 		}
 
-		string[] separatedNumbers = numbers.Split(
-			new string[]{",","\n"}, 
-			StringSplitOptions.RemoveEmptyEntries
-			);
 		int sum = 0;
 		
 		
