@@ -84,6 +84,6 @@ public class Tests {
 	public void custom_separators()
 	{
 		StringCalculator sut = new StringCalculator();
-		Assert.That(sut.Add("//;\\n1;2"), Is.EqualTo(3));
+		Assert.That(sut.Add("//;\n1;2"), Is.EqualTo(3));
 	}
 }
