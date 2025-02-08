@@ -102,7 +102,7 @@ public class Tests {
 	public void negatives_not_allowed()
 	{
 		StringCalculator sut = new StringCalculator();
-		Assert.That(sut.Add("//%\n1%-2%4"), Is.EqualTo("error: negatives not allowed"));
+		Assert.That(() => sut.Add("-1,2,-3"), Throws.Exception.With.Message.EqualTo("error: negatives not allowed"));
 	}
 	
 	
