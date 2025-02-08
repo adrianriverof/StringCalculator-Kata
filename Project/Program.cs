@@ -43,7 +43,7 @@ public class StringCalculator {
 				negatives.Add(numberInt);
 			}
 
-			if (numberInt > 1000)
+			if (numberInt > 1000)  // number class???
 			{
 				numberInt = 0;
 			}
