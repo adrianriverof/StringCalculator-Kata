@@ -41,6 +41,11 @@ public class StringCalculator {
 			{
 				negatives.Add(numberInt);
 			}
+
+			if (numberInt > 1000)
+			{
+				numberInt = 0;
+			}
 			sum += numberInt;
 		}
 
