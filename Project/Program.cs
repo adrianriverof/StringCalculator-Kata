@@ -51,7 +51,7 @@ public class StringCalculator {
 			string errorMessage = "error: negatives not allowed:";
 			foreach (var negativeNumber in negatives)
 			{
-				errorMessage = errorMessage + " " + negativeNumber.ToString();
+				errorMessage = errorMessage + " " + negativeNumber;
 			}
 
 			throw new Exception(errorMessage);
