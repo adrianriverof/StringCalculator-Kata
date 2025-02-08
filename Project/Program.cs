@@ -46,7 +46,13 @@ public class StringCalculator {
 
 		if (negatives.Count != 0)
 		{
-			throw new Exception("error: negatives not allowed");
+			string errorMessage = "error: negatives not allowed:";
+			foreach (var negativeNumber in negatives)
+			{
+				errorMessage = errorMessage + " " + negativeNumber.ToString();
+			}
+
+			throw new Exception(errorMessage);
 		}
 		
 		return sum;
