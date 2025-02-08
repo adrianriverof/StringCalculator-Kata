@@ -87,9 +87,9 @@ public class Tests {
 		Assert.That(sut.Add("//;\n1;2"), Is.EqualTo(3));
 	}
 	[Test]
-	public void custom_separators_other_operation()
+	public void custom_separators_other_separator()
 	{
 		StringCalculator sut = new StringCalculator();
-		Assert.That(sut.Add("//;\n1;31"), Is.EqualTo(32));
+		Assert.That(sut.Add("//a\n1a2a4"), Is.EqualTo(1+2+4));
 	}
 }
