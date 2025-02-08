@@ -30,18 +30,24 @@ public class StringCalculator {
 		}
 
 		int sum = 0;
-		
+
+		int[] negatives = new int[]{};
 		
 		foreach (var number in separatedNumbers)
 		{
 			int numberInt = int.Parse(number);
 			if (numberInt < 0)
 			{
-				throw new Exception("error: negatives not allowed");
+				negatives.Append(numberInt);
 			}
 			sum += numberInt;
 		}
 
+		if (negatives.Length != 0)
+		{
+			throw new Exception("error: negatives not allowed");
+		}
+		
 		return sum;
 	}
 }
