@@ -23,8 +23,7 @@ public class StringCalculator {
 			if (numbers.StartsWith("//["))
 			{
 				int separatorLength = startPosition - 2;
-				separator = numbers.Substring(3, separatorLength);
-				separator = "***";
+				separator = numbers.Substring(3, 3);
 			}
 			
 			separatedNumbers = numbers.Substring(startPosition).Split(
