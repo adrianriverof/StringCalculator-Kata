@@ -13,11 +13,13 @@ public class StringCalculator {
 		// we need to change this so we can find where the string starts (\n)
 		// and allow to find the separator (surrounded by [])
 		//
-		
+
+
 		if (numbers.StartsWith("//"))
 		{
 			string separator = numbers[2].ToString();
-			separatedNumbers = numbers[4..].Split(
+			int startPosition = numbers.IndexOf("\n");
+			separatedNumbers = numbers.Substring(startPosition).Split(
 				new string[]{separator}, 
 				StringSplitOptions.RemoveEmptyEntries
 			);
