@@ -124,4 +124,10 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("//[*--]\n1*--2*--4"), Is.EqualTo(1+2+4));
 	}
+	[Test]
+	public void separators_should_be_any_lenght_ie4()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("//[*--/]\n1*--/2*--/4"), Is.EqualTo(1+2+4));
+	}
 }
