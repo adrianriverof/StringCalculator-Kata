@@ -112,7 +112,7 @@ public class Tests {
 		Assert.That(sut.Add("1003,2"), Is.EqualTo(2));
 	}
 
-	[Test][Ignore("not implemented yet")]
+	[Test]
 	public void separators_can_be_lenghy_if_surrounded_by_sqbrackets()
 	{
 		StringCalculator sut = new StringCalculator();
