@@ -118,4 +118,10 @@ public class Tests {
 		StringCalculator sut = new StringCalculator();
 		Assert.That(sut.Add("//[***]\n1***2***4"), Is.EqualTo(1+2+4));
 	}
+	[Test]
+	public void another_lenghty_separator()
+	{
+		StringCalculator sut = new StringCalculator();
+		Assert.That(sut.Add("//[*--]\n1*--2*--4"), Is.EqualTo(1+2+4));
+	}
 }
