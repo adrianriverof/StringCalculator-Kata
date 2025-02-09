@@ -10,10 +10,6 @@ public class StringCalculator {
 
 		string[] separatedNumbers;
 		
-		// we need to change this so we can find where the string starts (\n)
-		// and allow to find the separator (surrounded by [])
-		//
-
 
 		if (numbers.StartsWith("//"))
 		{
@@ -52,7 +48,7 @@ public class StringCalculator {
 				negatives.Add(numberInt);
 			}
 
-			if (numberInt > 1000)  // number class???
+			if (numberInt > 1000)  
 			{
 				numberInt = 0;
 			}
