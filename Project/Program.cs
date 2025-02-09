@@ -19,6 +19,14 @@ public class StringCalculator {
 		{
 			string separator = numbers[2].ToString();
 			int startPosition = numbers.IndexOf("\n");
+			
+			if (numbers.StartsWith("//["))
+			{
+				int separatorLength = startPosition - 2;
+				separator = numbers.Substring(3, separatorLength);
+				separator = "***";
+			}
+			
 			separatedNumbers = numbers.Substring(startPosition).Split(
 				new string[]{separator}, 
 				StringSplitOptions.RemoveEmptyEntries
